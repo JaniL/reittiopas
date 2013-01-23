@@ -24,6 +24,11 @@ rm data/kerava.txt
 rm data/kirkkonummi.txt
 rm data/vantaa.txt
 
+rm data/palvelukartta.txt
+
+echo "Processing palvelukartta data"
+pk-extraction > data/palvelukartta.txt
+
 echo "Processing kalkati.net data"
 java -Xmx1024M -jar ../../kalkati-extraction/target/kalkati-extraction-0.1.0-SNAPSHOT-standalone.jar\
   Helsinki=data/helsinki.txt\
