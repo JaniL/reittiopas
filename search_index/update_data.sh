@@ -27,7 +27,13 @@ rm data/vantaa.txt
 rm data/palvelukartta.txt
 
 echo "Processing palvelukartta data"
-pk-extraction > data/palvelukartta.txt
+pk-extraction\
+  Helsinki=data/helsinki.txt\
+  Espoo=data/espoo.txt\
+  Kauniainen=data/kauniainen.txt\
+  Kerava=data/kerava.txt\
+  Kirkkonummi=data/kirkkonummi.txt\
+  Vantaa=data/vantaa.txt
 
 echo "Processing kalkati.net data"
 java -Xmx1024M -jar ../../kalkati-extraction/target/kalkati-extraction-0.1.0-SNAPSHOT-standalone.jar\
